@@ -1,0 +1,9 @@
+div.window {
+  @include ms-button();
+  background: $ms-gray;
+  height: 600px;
+  width: 800px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}

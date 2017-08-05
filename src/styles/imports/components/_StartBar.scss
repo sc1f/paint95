@@ -1,0 +1,65 @@
+div.startbar {
+  align-items: center;
+  background: $ms-gray;
+  border-top: 2px solid #fff;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  height: 25px;
+  position: fixed;
+  padding: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100vw;
+
+  div {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    align-content: center;
+
+    p {
+      margin: 0 0;
+    }
+  }
+
+  .startbar__item {
+    @include ms-button(true);
+    height: 100%;
+    padding: 5px 7.5px 5px 2px;
+    margin-right: 10px;
+
+    &.start-button {
+      @include ms-button(false);
+      cursor: default;
+      padding: 5px;
+    }
+
+    &.startbar__item--paint {
+      padding-right: 3em;
+    }
+  }
+
+  .startbar__icon {
+    @include ms-icon;
+  }
+}
+
+.startbar__container {
+  @include ms-container;
+  height: 100%;
+  padding: 5px 7.5px;
+
+  &.startbar__container--end {
+    margin-left: auto;
+    margin-right: 4px;
+  }
+}
+
+.current-time {
+  font-weight: normal;
+}
+
+
