@@ -5,6 +5,7 @@ class TitleBarActions extends Component {
         return(
             <div className="titlebar__container titlebar__container--end">
                 <div className="titlebar__action">_</div>
+                <div className="titlebar__action">o</div>
                 <div className="titlebar__action">X</div>
             </div>
         )

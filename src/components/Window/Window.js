@@ -1,15 +1,22 @@
 import React, { Component } from 'react';
-import Draggable from 'react-draggable';
-import TitleBar from './components/TitleBar/TitleBar';
+//import Draggable from 'react-draggable';
+import TitleBar from './components/TitleBar';
+import TaskBar from './components/TaskBar';
+import SideBar from './components/SideBar';
+import Canvas from './components/Canvas';
+
 
 class Window extends Component {
     render() {
         return(
-            <Draggable>
-                <div className="window">
-                    <TitleBar/>
+            <div className="window">
+                <TitleBar/>
+                <TaskBar/>
+                <div className="window__container">
+                    <SideBar/>
+                    <Canvas/>
                 </div>
-            </Draggable>
+            </div>
         )
     }
 }

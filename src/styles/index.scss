@@ -60,8 +60,8 @@ body {
   cursor: url('/src/assets/cursors/win95cursor.cur'), auto;
   margin: 0;
   padding: 0;
-  font-family: "Microsoft Sans Serif", sans-serif;
-  font-weight: bold;
+  font-family: Roboto, sans-serif;//"Microsoft Sans Serif", sans-serif;
+  font-weight: bolder;
   font-size: 13px;
 
 }
@@ -81,3 +81,6 @@ img {
 @import 'imports/components/StartBar';
 @import 'imports/components/Window';
 @import 'imports/components/TitleBar';
+@import 'imports/components/TaskBar';
+@import 'imports/components/SideBar';
+@import 'imports/components/Canvas';

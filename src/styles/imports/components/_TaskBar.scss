@@ -1,0 +1,21 @@
+.taskbar {
+  align-items: center;
+  border-bottom: 1px solid #000;
+  display: flex;
+  flex-direction: row;
+  height: 18px;
+  margin: 2px 0 0 0;
+  padding: 3px 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.taskbar__item {
+  padding: 2px 5px;
+}
+
+span.underline {
+  text-decoration: underline;
+}
