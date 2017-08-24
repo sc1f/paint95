@@ -5,7 +5,15 @@ div.window {
   width: 800px;
   position: absolute;
   top: 30px;
-  left: 30px;
+  right: 30%;
+}
+
+div.window--maximized {
+  height: 100%;
+  width: 100%;
+  position: static;
+  top: auto;
+  left: auto;
 }
 
 .window__container {

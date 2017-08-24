@@ -1,22 +1,42 @@
 import React, {Component} from 'react';
-import SidebarAction from './components/SideBarAction'
-class SideBar extends Component {
+
+export default class SideBar extends Component {
     render() {
-        let tools = [1, 2, 3, 4, 5, 6, 7, 8];
-        let toolsList = tools.map(function () {
-            return <SidebarAction/>;
-        })
         return (
             <div className="sidebar">
                 <div className="sidebar__container sidebar__container--actions">
-                    { toolsList }
+                    <SideBarAction name="pencil" selected/>
+                    <SideBarAction name="airbrush"/>
                 </div>
                 <div className="sidebar__container sidebar__container--end">
-
                 </div>
             </div>
         )
     }
 }
 
-export default SideBar;
+class SideBarAction extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            selected: this.props.selected,
+        };
+        this.selectSideBarAction = this.selectSideBarAction.bind(this);
+    }
+
+    selectSideBarAction() {
+        this.setState(prevState => ({
+            selected: !prevState.selected
+        }));
+    }
+    render() {
+        return(
+            <div className={this.state.selected ? 'sidebar__action sidebar__action--selected' : 'sidebar__action'}
+                 name={ this.props.name }
+                 selected={ this.state.selected }
+                 onClick={this.selectSideBarAction}>
+                <img src={ '/icons/' + this.props.name + '.png'} alt="this.props.name"/>
+            </div>
+        )
+    }
+}

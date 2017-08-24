@@ -35,9 +35,27 @@
   display: flex;
   height: 12px;
   font-size: 12px;
-  font-weight: bold;
+  font-weight: bold !important;
   justify-content: center;
   padding: 1px;
   text-align: center;
   width: 13px;
+}
+
+.titlebar__action--minimize {
+  border-bottom: 2.5px solid #000;
+  height: 6px;
+  width: 8px;
+}
+
+.titlebar__action--maximize {
+  border: 1.5px solid #000;
+  border-top: 2.5px solid #000;
+  height: 6px;
+  width: 6px;
+}
+
+.titlebar__action--close {
+  color: #000;
+  font-weight: bold;
 }

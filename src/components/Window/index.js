@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
-//import Draggable from 'react-draggable';
 import TitleBar from './components/TitleBar';
 import TaskBar from './components/TaskBar';
 import SideBar from './components/SideBar';
 import Canvas from './components/Canvas';
 
 
-class Window extends Component {
+export default class Window extends Component {
+    constructor(props) {
+        super(props);
+    }
+
     render() {
         return(
-            <div className="window">
+            <div className={ this.props.maximized ? "window window--maximized" : "window" }
+                 maximized={ this.props.maximized }>
                 <TitleBar/>
                 <TaskBar/>
                 <div className="window__container">
@@ -20,5 +24,3 @@ class Window extends Component {
         )
     }
 }
-
-export default Window;

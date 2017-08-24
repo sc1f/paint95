@@ -60,7 +60,7 @@ body {
   cursor: url('/src/assets/cursors/win95cursor.cur'), auto;
   margin: 0;
   padding: 0;
-  font-family: Roboto, sans-serif;//"Microsoft Sans Serif", sans-serif;
+  font-family: "Microsoft Sans Serif", sans-serif;
   font-weight: bolder;
   font-size: 13px;
 
@@ -79,6 +79,7 @@ img {
 
 @import 'imports/mixins';
 @import 'imports/components/StartBar';
+@import 'imports/components/Desktop';
 @import 'imports/components/Window';
 @import 'imports/components/TitleBar';
 @import 'imports/components/TaskBar';
